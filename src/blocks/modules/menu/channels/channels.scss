@@ -1,0 +1,37 @@
+.channels {
+
+    padding-bottom: vw(17.5);
+    // .channels__header
+
+    &__header {
+        @extend %flex-row-center;
+        margin-bottom: vw(15);
+        @extend %text-12;
+        text-transform: uppercase;
+        color: #919191;
+    }
+
+    // .channels__button
+
+    &__button {
+        width: 100%;
+        padding: vw(3) vw(14) vw(8);
+        font-size: vw(14);
+        line-height: vw(17);
+        color: #B5B5B5;
+        text-align: left;
+        transition: .3s color;
+
+        &_active {
+            background-color: rgba(#25272A, .2);
+            font-weight: 700;
+            color: #fff;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+}

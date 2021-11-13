@@ -1,0 +1,113 @@
+.profile {
+
+    width: vw(200);
+    background-color: rgba(0, 0, 0, 0.2);
+    // .profile__image
+
+    &__image {
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    // .profile__content
+
+    &__content {
+        padding: vw(20);
+    }
+
+    &__bio {
+        margin-bottom: vw(20);
+    }
+
+    // .profile__name
+
+    &__name {
+        position: relative;
+        display: inline-block;
+        padding-right: vw(12.5);
+        margin-bottom: vw(3.5);
+
+        &:after {
+            content: '';
+            @extend %pos-center-y;
+            right: 0;
+            width: vw(6);
+            height: vw(6);
+            border-radius: 50%;
+            background-color: #70CC16;
+        }
+    }
+
+    // .profile__position
+
+    &__position {
+        @extend %text-12;
+        color: #5F6164;
+    }
+
+    // .profile__buttons
+
+    &__buttons {
+        display: grid;
+        grid-template-columns: auto vw(25);
+        grid-gap: vw(2.5);
+        margin: vw(18.5) 0 vw(14);
+    }
+
+    // .profile__btn
+
+    &__btn {
+        border-radius: vw(5);
+        height: vw(25);
+        @extend %flex-center;
+    }
+}
+
+.btn {
+    background-color: $blue;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+}
+
+.js-message-btn {
+    @extend %text-13;
+}
+
+.js-drop-btn {
+    position: relative;
+
+    &:after {
+        content: '';
+        @extend %pos-center-xy;
+        width: vw(6.5);
+        height: vw(5.5);
+        background-color: #fff;
+        clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+    }
+}
+
+.profile-contacts {
+
+    // .profile-contacts__item
+
+    &__item {
+        dt {
+            @extend %text-12;
+            color: #5F6164;
+            margin-bottom: vw(2);
+        }
+
+        dd {
+            @extend %text-14;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: vw(11);
+        }
+    }
+}
+
+@import '../social/social';

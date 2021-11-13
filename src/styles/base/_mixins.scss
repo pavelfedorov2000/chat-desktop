@@ -1,0 +1,19 @@
+@mixin scrollbar() {
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 0;
+        height: 0;
+    }
+}
+
+@function vw($size) {
+    $result: $size * 100vw / 1400;
+    @return $result;
+}
+
+@function vh($size) {
+    $result: $size * 100vh / 800;
+    @return $result;
+}

@@ -1,0 +1,8 @@
+.btn {
+    //background-color: $accent;
+    text-align: center;
+
+    @media (any-hover: hover) {
+        &:hover {}
+    }
+}

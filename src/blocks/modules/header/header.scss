@@ -1,0 +1,132 @@
+.header {
+
+    min-height: vw(49.5);
+    padding: 0 vw(23);
+    border-bottom: 1px solid rgba(#000, .24);
+    // .header__inner
+
+    &__inner {
+        @extend %flex-row-center;
+    }
+
+    // .header__title
+
+    &__title {
+        //position: relative;
+        @extend %vertical-align;
+        font-weight: 700;
+        font-size: vw(20);
+        line-height: vw(24);
+
+        svg {
+            width: vw(15);
+            height: vw(14);
+            margin-left: vw(5.5);
+        }
+
+        /* &:after {
+            content: '';
+            position: absolute;
+            background-image: url(../img/icons/star.svg);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        } */
+    }
+
+    // .header__actions
+
+    &__actions {
+        @extend %vertical-align;
+
+        >* {
+            &:not(:last-child) {
+                margin-right: vw(23);
+            }
+        }
+    }
+}
+
+.users {
+
+    @extend %vertical-align;
+    // .users__num
+
+    &__num {
+        @extend %text-14;
+        color: #A4A4A4;
+    }
+
+    svg {
+        width: vw(10);
+        height: vw(14);
+        margin-right: vw(5);
+    }
+}
+
+.search-form {
+
+    width: vw(241);
+    @extend %flex-row-center;
+    padding: vw(8) vw(15.5) vw(8) vw(16.5);
+    border-radius: vw(5);
+    background-color: rgba(0, 0, 0, 0.0001);
+    border: 0.5px solid rgba(0, 0, 0, 0.24);
+
+    &__input {
+        flex: 1 1 auto;
+        @extend %text-14;
+        color: #8D8D8D;
+        padding-right: vw(15);
+        border-radius: vw(5);
+
+        &::placeholder {
+            color: #8D8D8D;
+        }
+    }
+
+    // .search-form__btn
+
+    &__btn {
+        flex-shrink: 0;
+
+        svg {
+            width: vw(15);
+            height: vw(14);
+        }
+    }
+}
+
+.notifications-btn {
+    position: relative;
+
+    svg {
+        width: vw(14);
+        height: vw(14);
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: vw(-2);
+        right: vw(-3);
+        width: vw(4);
+        height: vw(4);
+        border-radius: 50%;
+        background-color: #FD4948;
+    }
+}
+
+.three-dots-btn {
+    display: grid;
+    grid-gap: vw(2.5);
+    width: vw(3.5);
+    height: vw(15.5);
+
+    span {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: rgba(#000, .3);
+    }
+}

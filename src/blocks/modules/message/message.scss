@@ -1,0 +1,46 @@
+.message {
+    height: vw(71.5);
+    @extend %vertical-align;
+    padding: 0 vw(23);
+    // .message__row
+
+    &__row {
+        width: 100%;
+        @extend %vertical-align;
+
+        >* {
+            &:not(:last-child) {
+                margin-right: vw(20);
+            }
+        }
+    }
+
+    // .message__textfield
+
+    &__textfield {
+        outline: none;
+        border: none;
+        padding: 0;
+        flex: 1 1 auto;
+        @extend %text-14;
+        color: #8D8D8D;
+
+        &::placeholder {
+            color: #8D8D8D;
+        }
+    }
+}
+
+.attach-btn {
+    svg {
+        width: vw(12);
+        height: vw(20);
+    }
+}
+
+.voice-btn {
+    svg {
+        width: vw(14);
+        height: vw(20);
+    }
+}

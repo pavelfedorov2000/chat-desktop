@@ -1,0 +1,87 @@
+.menu {
+    width: vw(260);
+    padding: vw(35) vw(15) vw(15) vw(25);
+    background-color: rgba(#25272A, .75);
+    @extend %flex-col;
+    @include scrollbar;
+
+    &__top {
+        @extend %flex-row-center;
+        margin-bottom: vw(30);
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: vw(20);
+        line-height: vw(24);
+        color: #FFF;
+        padding-right: vw(15);
+        position: relative;
+        cursor: pointer;
+
+        &:after {
+            content: '';
+            @extend %pos-center-y;
+            right: 0;
+            width: vw(10);
+            height: vw(7);
+            background-image: url(../img/icons/list_drop.svg);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__treads {
+        //flex: 1 1 auto;
+        margin-bottom: vw(31.5);
+    }
+}
+
+.all-treads {
+    @extend %vertical-align;
+    @extend %text-14;
+    color: #B5B5B5;
+    transition: .3s color;
+
+    &__icon {
+        width: vw(16);
+        height: vw(17);
+        margin-right: vw(11);
+
+        path {
+            transition: .3s opacity;
+        }
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            color: #fff;
+
+            .all-treads__icon {
+                path {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.settings-btn {
+    svg {
+        width: vw(14);
+        height: vw(14);
+        transition: .3s transform;
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            svg {
+                transform: rotate(45deg);
+            }
+        }
+    }
+}
+
+@import './channels/channels.scss';
+@import './friends/friends.scss';

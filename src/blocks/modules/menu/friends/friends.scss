@@ -1,0 +1,64 @@
+.friends {
+
+    // .friends__top
+
+    &__top {
+        @extend %flex-row-center;
+        margin-bottom: vw(22);
+        @extend %text-12;
+        text-transform: uppercase;
+        color: #919191;
+    }
+
+    // .friends__item
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: vw(10.5);
+        }
+    }
+}
+
+.friend {
+    position: relative;
+    padding-left: vw(14);
+
+    &:before {
+        content: '';
+        @extend %pos-center-y;
+        left: 0;
+        width: vw(6);
+        height: vw(6);
+        border-radius: 50%;
+        background-color: #666;
+    }
+
+    &_online {
+        &:before {
+            background-color: #70CC16;
+        }
+    }
+
+    // .friend__wrap
+
+    &__wrap {
+        @extend %vertical-align;
+    }
+
+    // .friend__img
+
+    &__img {
+        width: vw(32);
+        height: vw(32);
+        border-radius: vw(5);
+        flex-shrink: 0;
+        margin-right: vw(12.5);
+    }
+
+    // .friend__name
+
+    &__name {
+        @extend %text-14;
+        color: #B5B5B5;
+    }
+}

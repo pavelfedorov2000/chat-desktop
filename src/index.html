@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Chat Desktop Mac OS</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="app" id="app">
+            @@include('./blocks/modules/navbar/_navbar.html')
+            @@include('./blocks/modules/menu/_menu.html')
+            <main class="app__main">
+                @@include('./blocks/modules/header/_header.html')
+                @@include('./blocks/modules/chat/_chat.html')
+                @@include('./blocks/modules/message/_message.html')
+            </main>
+            @@include('./blocks/modules/profile/_profile.html')
+        </div>
+    </div>
+
+    <script src="js/script.min.js"></script>
+</body>
+
+</html>
